@@ -1,12 +1,16 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
-import '../index.css'; // Make sure this path is correct
+import '../index.css'; 
+import carLogo from '../assets/car.png';
 
 function NavBar() {
     return (
-        <header className="header">
+        <header className="navbar">
             <div className="container">
-                <NavLink className="brand" to='/'>PoolPal</NavLink>
+                <NavLink className="brand" to='/'>
+                    PoolPal
+                    <img src={carLogo} alt="Car Logo" className="logo" />
+                </NavLink>
                 <input className="toggle-input" type="checkbox" id="navbar-open" />
                 <label className="toggle-label" htmlFor="navbar-open">
                     <svg xmlns="http://www.w3.org/2000/svg" className="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">

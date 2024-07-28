@@ -1,15 +1,33 @@
-/* index.css */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Combined CSS */
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* General Styles */
 body {
-  font-family: "Work Sans", sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0a29;
+    color: white;
+    text-align: center;
 }
 
-.header {
+a {
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+.navbar {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin-bottom: 0.5rem;
+    background-color: #111035;
+    padding-top: 1rem 1.5rem; 
+    padding-bottom: 1rem 1.5rem; 
+    font-size: 1.25rem;
 }
 
+/* Container Styles */
 .container {
     position: relative;
     max-width: 10000px;
@@ -30,11 +48,12 @@ body {
     }
 }
 
+/* Brand Styles */
 .brand {
-    font-size: 3rem;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, rgb(86, 57, 182), rgb(203, 0, 203));
+    font-size: 3rem;
+    background: linear-gradient(to right, #004ca4, #006f73);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent; /* Fallback for older browsers */
@@ -44,6 +63,14 @@ body {
     padding-right: 0.75rem;
 }
 
+/* Logo Styles */
+.logo {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    margin-left: 1rem;
+}
+
+/* Toggle Styles */
 .toggle-input {
     display: none;
 }
@@ -61,6 +88,7 @@ body {
     width: 1.5rem;
 }
 
+/* Navigation Styles */
 .nav {
     display: none;
     padding-top: 1rem;
@@ -97,19 +125,21 @@ body {
     }
 }
 
+/* Link Styles */
 .inactive {
     color: gray;
     transition: color 0.3s;
 }
 
 .inactive:hover {
-    color: rgb(86, 57, 182);
+    color: #004ca4;
 }
 
 .active {
-    color: rgb(86, 57, 182);
+    color: #004ca4;
 }
 
+/* Signup Button Styles */
 .signup {
     margin-top: 0.5rem;
 }
@@ -122,34 +152,138 @@ body {
 
 .signup-inactive {
     border-radius: 0.5rem;
-    border: 2px solid rgb(86, 57, 182);
+    border: 2px solid #004ca4;
     padding: 0.5rem 1.5rem;
     font-weight: 500;
-    color: rgb(86, 57, 182);
+    color: #004ca4;
     transition: all 0.3s;
 }
 
 .signup-inactive:hover {
     color: white;
-    background-color: rgb(86, 57, 182);
+    background-color: #004ca4;
 }
 
 .signup-active {
     border-radius: 0.5rem;
-    border: 2px solid rgb(86, 57, 182);
+    border: 2px solid #004ca4;
     padding: 0.5rem 1.5rem;
     font-weight: 500;
     color: white;
-    background-color: rgb(86, 57, 182);
+    background-color: #004ca4;
     transition: all 0.3s;
 }
 
 .signup-active:hover {
     color: rgb(0, 0, 0);
-    background-color: rgb(168, 145, 242);
-    border-color: rgb(168, 145, 242);
+    background-color: #005cc5;
+    border-color: #005cc5;
 }
 
-a {
-    text-decoration: none;
+/* Landing Page Styles */
+.landing-page {
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header h1 {
+    margin-top: 50px;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.sometext {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/* Buttons Styles */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem; 
+  border-radius: 0.75rem; 
+  font-weight: 600; 
+  font-size: 1.25rem; 
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+}
+
+.btn-secondary {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+}
+
+/* Features Styles */
+.features {
+  display: flex;
+  flex-direction: column; /* Stack features vertically */
+  align-items: center; /* Center features horizontally */
+  gap: 2rem;
+  margin-bottom: 2rem;
+  max-width: 1000px; /* Limit the max width */
+  margin: 0 auto; /* Center the features container horizontally */
+}
+
+.feature {
+  display: flex;
+  align-items: center; /* Center text vertically with the image */
+  text-align: left; /* Align text to the left */
+  gap: 1rem; /* Add some space between the image and text */
+  width: 100%; /* Make sure the feature takes full width */
+}
+
+.feature img {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+}
+
+.lightbluecolortext {
+  color: #5a9ae4;
+}
+
+.bulletin {
+  list-style-type: disc;
+  padding-left: 0; /* Remove default padding */
+  text-align: left; /* Align text to the left */
+  color: #ffffff; /* White color */
+  display: inline-block; /* Make the list items inline-block */
+  margin: 0 auto; /* Center the list items */
+}
+
+.bulletin li {
+  margin-bottom: 1rem; /* Space between list items */
+  padding-left: 1.5rem; /* Indent list items */
+}
+
+
+/* Variations Styles */
+.variations h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.variations p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
 }
